@@ -1,9 +1,9 @@
 const TOTAL=12;
 const KEY="sq-team-projekt-26-27-pilotklasse";
 const STATUS={
- plan:{label:"Im Plan",cls:"green"},
- attention:{label:"Achtung",cls:"yellow"},
- critical:{label:"Kritisch",cls:"red"}
+ plan:{label:"Auf Kurs",cls:"green"},
+ attention:{label:"Klärungsbedarf",cls:"yellow"},
+ critical:{label:"Handlungsbedarf",cls:"red"}
 };
 const blank=i=>({id:i,responsible:"",goal:"",task:"",deadline:"",status:"plan",next:""});
 let packages=load();
@@ -30,9 +30,9 @@ function render(){
     <div class="field full"><label>Aufgabe</label><textarea data-field="task" placeholder="Was ist konkret zu tun?">${esc(p.task)}</textarea></div>
     <div class="field"><label>Deadline</label><input type="date" data-field="deadline" value="${esc(p.deadline)}"></div>
     <div class="field"><label>Status</label><select data-field="status">
-      <option value="plan" ${p.status==="plan"?"selected":""}>🟢 Im Plan</option>
-      <option value="attention" ${p.status==="attention"?"selected":""}>🟡 Achtung</option>
-      <option value="critical" ${p.status==="critical"?"selected":""}>🔴 Kritisch</option>
+      <option value="plan" ${p.status==="plan"?"selected":""}>🟢 Auf Kurs</option>
+      <option value="attention" ${p.status==="attention"?"selected":""}>🟡 Klärungsbedarf</option>
+      <option value="critical" ${p.status==="critical"?"selected":""}>🔴 Handlungsbedarf</option>
     </select></div>
     <div class="field full"><label>Nächste Schritte</label><textarea data-field="next" placeholder="Was passiert als Nächstes?">${esc(p.next)}</textarea></div>
    </div><div class="card-actions"><button class="btn btn-save" data-save="${p.id}">Speichern</button></div></div>
