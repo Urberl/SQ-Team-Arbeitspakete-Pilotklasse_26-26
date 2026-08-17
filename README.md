@@ -9,7 +9,7 @@ Responsive Web-App für das SQ-Team der FOSBOS Weilheim.
 - Ziel
 - Aufgabe
 - Deadline
-- Ampelstatus: 🟢 Im Plan / 🟡 Achtung / 🔴 Kritisch
+- Ampelstatus: 🟢 Auf Kurs / 🟡 Klärungsbedarf / 🔴 Handlungsbedarf
 - Nächste Schritte
 - Speichern
 - PDF-Export über den Browser
