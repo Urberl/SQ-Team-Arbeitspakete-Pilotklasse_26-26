@@ -1,0 +1,37 @@
+*{box-sizing:border-box}
+:root{
+  --blue:#1998d1;--blue-dark:#0877ad;--green:#8dbd3f;
+  --ink:#263f48;--muted:#667b82;--bg:#f4f8fa;--card:#fff;
+  --line:#dce7eb;--yellow:#e5b83e;--red:#cb5a55;
+  --shadow:0 7px 24px rgba(27,71,88,.09)
+}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+.site-header{background:#fff;border-bottom:4px solid var(--blue);padding:14px clamp(14px,4vw,48px);display:flex;justify-content:space-between;align-items:center;gap:18px;position:sticky;top:0;z-index:10;box-shadow:0 2px 14px rgba(0,0,0,.08)}
+.brand{display:flex;align-items:center;gap:22px;min-width:0}.logo{width:min(360px,42vw);height:auto;max-height:82px;object-fit:contain;object-position:left center}
+.project-title{border-left:1px solid var(--line);padding-left:20px}.project-title span{font-size:11px;font-weight:900;letter-spacing:.12em;color:var(--green)}h1{font-size:26px;margin:4px 0 0;color:var(--blue-dark)}
+.btn{border:0;border-radius:10px;padding:11px 15px;font-weight:800;cursor:pointer}.btn-pdf{background:var(--blue);color:#fff}.btn-pdf:hover{background:var(--blue-dark)}
+.container{max-width:1450px;margin:auto;padding:30px clamp(14px,3vw,42px) 55px}
+.hero{display:flex;justify-content:space-between;align-items:flex-end;gap:25px;margin-bottom:20px}
+.eyebrow{font-size:11px;font-weight:900;letter-spacing:.14em;color:var(--green)}
+h2{font-size:30px;margin:5px 0 7px}.hero p{margin:0;color:var(--muted)}
+.legend{display:flex;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:13px}.legend span{display:flex;gap:6px;align-items:center}.dot{display:inline-block;width:11px;height:11px;border-radius:50%}.green{background:#6fa538}.yellow{background:var(--yellow)}.red{background:var(--red)}
+.message{height:25px;color:var(--muted);font-size:13px}
+.package-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.card-head{padding:14px 18px;background:#fbfdfe;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.number{font-size:13px;font-weight:900;color:var(--blue-dark)}.status-pill{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:900}
+.card-body{padding:17px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:6px}.full{grid-column:1/-1}
+label{font-size:12px;font-weight:800;color:#566d74}
+input,textarea,select{font:inherit;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:10px 11px;background:#fff;outline:none}
+textarea{min-height:75px;resize:vertical}input:focus,textarea:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(25,152,209,.11)}
+.card-actions{display:flex;justify-content:flex-end;margin-top:12px}.btn-save{background:var(--blue);color:white}
+footer{display:flex;justify-content:space-between;padding:14px clamp(14px,4vw,48px);background:white;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+@media(max-width:950px){.package-grid{grid-template-columns:1fr}.hero{flex-direction:column;align-items:flex-start}}
+@media(max-width:650px){
+ .site-header{padding:10px 12px;align-items:flex-start}.brand{gap:10px}.logo{width:180px;max-height:58px}.project-title{padding-left:10px}.project-title span{font-size:8px}.project-title h1{font-size:18px}.btn-pdf{font-size:0;padding:10px}.btn-pdf:after{content:"PDF";font-size:12px}
+ .container{padding:20px 10px 35px}.fields{grid-template-columns:1fr}.full{grid-column:auto}.card-body{padding:14px}.card-head{padding:12px 14px}
+}
+@media print{
+ body{background:#fff}.site-header{position:static;box-shadow:none}.btn,.message,footer{display:none!important}.container{max-width:none;padding:12px}
+ .package-grid{grid-template-columns:1fr 1fr;gap:10px}.card{box-shadow:none;break-inside:avoid}.card-body{padding:10px}.fields{gap:7px}
+ input,textarea,select{border-color:#aaa;padding:6px}.hero{margin-bottom:8px}
+}

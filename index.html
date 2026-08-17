@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1998d1">
+  <title>SQ-Team-Projekt 26/27: Pilotklasse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="brand">
+    <img src="logo.jpg" alt="Fachoberschule Berufsoberschule Weilheim" class="logo">
+    <div class="project-title">
+      <span>SQ-TEAM-PROJEKT 26/27</span>
+      <h1>Pilotklasse</h1>
+    </div>
+  </div>
+  <button id="pdfBtn" class="btn btn-pdf">PDF exportieren</button>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">SCHULQUALITÄTSTEAM</div>
+      <h2>Arbeitspakete</h2>
+      <p>Gemeinsame Arbeitsgrundlage für die Entwicklung der Pilotklasse.</p>
+    </div>
+    <div class="legend">
+      <span><i class="dot green"></i> Im Plan</span>
+      <span><i class="dot yellow"></i> Achtung</span>
+      <span><i class="dot red"></i> Kritisch</span>
+    </div>
+  </section>
+
+  <div id="message" class="message" role="status"></div>
+  <section id="packages" class="package-grid"></section>
+</main>
+
+<footer>
+  <span>SQ-Team-Projekt 26/27 · Pilotklasse</span>
+  <span id="saveState">Bereit</span>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
